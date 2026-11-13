@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Materials>
+	<NameTranslation outputMappedNamesOnly="true" defaultName="Другое">
+		<MaterialName original="Material02" new="ֺЗадание нагрузки"/>
+		<MaterialName original="Material06" new="Нестандартизированное оборудование"/>
+		<MaterialName original="Material08" new="Оборудование"/>
+		<MaterialName original="Material16" new="ֺЗадание"/>
+		<MaterialName original="Material18" new="Трубопроводы (жидкости горючие)"/>
+		<MaterialName original="Material20" new="Трубопроводы (прочие вещества)"/>
+		<MaterialName original="Material30" new="ֺМодель Caroline"/>
+		<MaterialName original="Material34" new="(СО-АР) Кровля, перекрытия"/>
+		<MaterialName original="Material40" new="(СО-КЖ) Перекрытия"/>
+		<MaterialName original="Material44" new="Реконструируемый объект"/>
+		<MaterialName original="Material47" new="Оборудование САНО"/>
+		<MaterialName original="Material48" new="(ЭО,ОА) Лотки, короба"/>
+		<MaterialName original="Material49" new="(ЭО,ОА) Щиты, пульты, коробки"/>
+		<MaterialName original="Material51" new="Оборудование ГМО"/>
+		<MaterialName original="Material59" new="Трубопроводы (газы)"/>
+		<MaterialName original="Material66" new="(СО-АР) Стены"/>
+		<MaterialName original="Material73" new="(СО-КЖ) Фундаменты"/>
+		<MaterialName original="Material79" new="(ЭО,ОА) Объемы кабельных трасс"/>
+		<MaterialName original="Material92" new="Трубопроводы (воздух)"/>
+		<MaterialName original="Material100" new="Строительные оси"/>
+		<MaterialName original="Material109" new="Трубопроводы (вода)"/>
+		<MaterialName original="Material167" new="(СО-КМ) Металлоконструкции"/>
+		<MaterialName original="Material179" new="(СО-КМ) Узлы металлоконструкций"/>
+		<MaterialName original="Material227" new="Другое"/>
+		<MaterialName original="Material314" new="Объемы резервирования"/>
+		<MaterialName original="Material359" new="(САНО-ОВ) Воздуховоды"/>
+		<MaterialName original="Material360" new="Оборудование ООР"/>
+	</NameTranslation>
+</Materials>

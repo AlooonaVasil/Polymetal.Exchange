@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://spbavevalic.polymetal.ru/SqlServise/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://spbavevalic.polymetal.ru/SqlServise/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetStrConnectPdms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPdms" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPdms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPdmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalAmu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalAmu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalAmu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalAmuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalBkr_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalBkr" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalBkr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalBkrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalMay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalMay" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalMay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalMayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalOzk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalOzk" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalOzk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalOzkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalSmg_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalSmg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalSmg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalSmgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalSrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalSrl" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalSrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalSrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalSvt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalSvt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalSvt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalSvtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalTmp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalTmp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStrConnectPortalTmp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrConnectPortalTmpResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetStrConnectPdms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPdms" message="tns:IService1_GetStrConnectPdms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPdmsResponse" message="tns:IService1_GetStrConnectPdms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalAmu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalAmu" message="tns:IService1_GetStrConnectPortalAmu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalAmuResponse" message="tns:IService1_GetStrConnectPortalAmu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalBkr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalBkr" message="tns:IService1_GetStrConnectPortalBkr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalBkrResponse" message="tns:IService1_GetStrConnectPortalBkr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalMay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalMay" message="tns:IService1_GetStrConnectPortalMay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalMayResponse" message="tns:IService1_GetStrConnectPortalMay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalOzk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalOzk" message="tns:IService1_GetStrConnectPortalOzk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalOzkResponse" message="tns:IService1_GetStrConnectPortalOzk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalSmg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalSmg" message="tns:IService1_GetStrConnectPortalSmg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalSmgResponse" message="tns:IService1_GetStrConnectPortalSmg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalSrl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalSrl" message="tns:IService1_GetStrConnectPortalSrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalSrlResponse" message="tns:IService1_GetStrConnectPortalSrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalSvt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalSvt" message="tns:IService1_GetStrConnectPortalSvt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalSvtResponse" message="tns:IService1_GetStrConnectPortalSvt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalTmp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalTmp" message="tns:IService1_GetStrConnectPortalTmp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStrConnectPortalTmpResponse" message="tns:IService1_GetStrConnectPortalTmp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttp" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStrConnectPdms">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPdms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalAmu">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPortalAmu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalBkr">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPortalBkr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalMay">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPortalMay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalOzk">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPortalOzk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalSmg">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPortalSmg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalSrl">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPortalSrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalSvt">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPortalSvt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrConnectPortalTmp">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStrConnectPortalTmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="basicHttp" binding="tns:basicHttp">
+      <soap:address location="http://spbavevalic.polymetal.ru/SqlServise/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

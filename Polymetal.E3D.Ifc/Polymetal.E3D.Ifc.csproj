@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63650486-6BBD-4C23-A805-51BD7B80AB5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Polymetal.E3D.Ifc</RootNamespace>
+    <AssemblyName>Polymetal.E3D.Ifc</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\AVEVA\E3D3.1\PolyDLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\AVEVA\Exchange\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aveva.CIE.Foundation.Basic">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.CIE.Foundation.Basic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.CIE.Interface, Version=1.3.0.0, Culture=neutral, PublicKeyToken=17c64733a9775004, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.CIE.Interface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Database, Version=1.2.0.0, Culture=neutral, PublicKeyToken=17c64733a9775004, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Database.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Database.Filters, Version=1.2.0.0, Culture=neutral, PublicKeyToken=17c64733a9775004, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Database.Filters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Geometry, Version=1.2.0.0, Culture=neutral, PublicKeyToken=17c64733a9775004, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Geometry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Maths.Geometry, Version=1.2.0.0, Culture=neutral, PublicKeyToken=17c64733a9775004, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Maths.Geometry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Utilities, Version=1.2.0.0, Culture=neutral, PublicKeyToken=17c64733a9775004, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core3D.CSG">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core3D.CSG.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core3D.Interaction.Generic">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core3D.Interaction.Generic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PMLNet, Version=1.2.0.0, Culture=neutral, PublicKeyToken=17c64733a9775004, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PMLNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Polymetal.Core.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.E3D.Design.EquipmentTemplateProperties, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Polymetal.E3D.Design.EquipmentTemplateProperties.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.Pdms.Common.DataBaseUtilites, Version=3.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Polymetal.Pdms.Common.DataBaseUtilites.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="Xbim.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=11e3655e576ec5a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Xbim.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xbim.Ifc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=11e3655e576ec5a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Xbim.Ifc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xbim.Ifc.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=11e3655e576ec5a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Xbim.Ifc.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xbim.Ifc2x3, Version=4.0.0.0, Culture=neutral, PublicKeyToken=11e3655e576ec5a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Xbim.Ifc2x3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xbim.Ifc4, Version=4.0.0.0, Culture=neutral, PublicKeyToken=11e3655e576ec5a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Xbim.Ifc4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xbim.IO, Version=4.0.0.0, Culture=neutral, PublicKeyToken=11e3655e576ec5a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Xbim.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xbim.ModelGeometry.Scene, Version=4.0.0.0, Culture=neutral, PublicKeyToken=11e3655e576ec5a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Xbim.ModelGeometry.Scene.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbElementComparer.cs" />
+    <Compile Include="DB\IfcDatabaseProvider.cs" />
+    <Compile Include="DB\IIfcDatabaseProvider.cs" />
+    <Compile Include="DTO\AvevaBox.cs" />
+    <Compile Include="DTO\AvevaCircTorus.cs" />
+    <Compile Include="DTO\AvevaCone.cs" />
+    <Compile Include="DTO\AvevaCylinder.cs" />
+    <Compile Include="DTO\AvevaDimension.cs" />
+    <Compile Include="DTO\AvevaEllipticalDish.cs" />
+    <Compile Include="DTO\AvevaExtrusion.cs" />
+    <Compile Include="DTO\AvevaFacetGroup.cs" />
+    <Compile Include="DTO\AvevaLine.cs" />
+    <Compile Include="DTO\AvevaPyramid.cs" />
+    <Compile Include="DTO\AvevaRectTorus.cs" />
+    <Compile Include="DTO\AvevaRevolution.cs" />
+    <Compile Include="DTO\AvevaSlcy.cs" />
+    <Compile Include="DTO\AvevaSnout.cs" />
+    <Compile Include="DTO\AvevaSphere.cs" />
+    <Compile Include="DTO\AvevaSphericalDish.cs" />
+    <Compile Include="ExportIfc.cs" />
+    <Compile Include="AvevaGeometry.cs" />
+    <Compile Include="AvevaProperty.cs" />
+    <Compile Include="ExtraAttributes.cs" />
+    <Compile Include="Helpers\AvevaGeometryExtentions.cs" />
+    <Compile Include="Helpers\Enumerators.cs" />
+    <Compile Include="ImportIfc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\rules.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

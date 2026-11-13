@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A44565C2-C761-4E96-92BF-F35FC787C5C9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Polymetal.Exchange.E3D</RootNamespace>
+    <AssemblyName>Polymetal.Exchange.E3D</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\AVEVA\Exchange\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\AVEVA\Exchange\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Polymetal.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aveva.ApplicationFramework">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.ApplicationFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Database">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Database.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Database.Filters">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Database.Filters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Geometry">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Geometry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Maths.Geometry">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Maths.Geometry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.Core.Utilities">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.Core.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aveva.E3D.Standalone">
+      <HintPath>C:\AVEVA\E3D3.1\Aveva.E3D.Standalone.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\DotNetZip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.Core.Common">
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Polymetal.Core.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.E3D.Ifc, Version=2.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Polymetal.E3D.Ifc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.Exchange.Utilities, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\Exchange\Polymetal.Exchange.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.Exporter.AvevaUtility">
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Polymetal.Exporter.AvevaUtility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.Pdms.Common.PseudoAttributeAddin">
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Polymetal.Pdms.Common.PseudoAttributeAddin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tekla.Structures, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\Tekla.Structures.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZetaLongPaths">
+      <HintPath>C:\AVEVA\E3D3.1\PolyDLL\ZetaLongPaths.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ElementHistory.cs" />
+    <Compile Include="Export.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="Helpers\AvevaGeometry.cs" />
+    <Compile Include="Helpers\Common.cs" />
+    <Compile Include="Helpers\Enumerators.cs" />
+    <Compile Include="Helpers\NwdExport.cs" />
+    <Compile Include="MagicExport.cs" />
+    <Compile Include="MagicImport.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RevitImport.cs" />
+    <Compile Include="RunE3D.cs" />
+    <Compile Include="TeklaImport.cs" />
+    <Compile Include="Xbim\IVector3D.cs" />
+    <Compile Include="Xbim\XbimException.cs" />
+    <Compile Include="Xbim\XbimMatrix3D.cs" />
+    <Compile Include="Xbim\XbimPoint3D.cs" />
+    <Compile Include="Xbim\XbimQuaternion.cs" />
+    <Compile Include="Xbim\XbimVector3D.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\empty.dwg" />
+    <EmbeddedResource Include="Resources\MMServices.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Polymetal.ico" />
+    <EmbeddedResource Include="Resources\MMServices.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

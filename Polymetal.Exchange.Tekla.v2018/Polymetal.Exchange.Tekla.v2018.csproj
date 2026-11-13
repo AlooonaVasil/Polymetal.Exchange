@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A79948A-096C-44B0-8D50-C1CB8F9A3456}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Polymetal.Exchange.Tekla.v2018</RootNamespace>
+    <AssemblyName>Polymetal.Exchange.Tekla.v2018</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\AVEVA\Exchange\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\AVEVA\Exchange\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Polimetall.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Clipper2Lib, Version=1.5.4.0, Culture=neutral, PublicKeyToken=ddeb3f68c442d6e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\AVEVA\Exchange\Clipper2Lib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Polymetal.Exchange.Utilities">
+      <HintPath>C:\AVEVA\Exchange\Polymetal.Exchange.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tekla.Structures, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\TeklaStructures\2018\nt\bin\plugins\Tekla.Structures.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tekla.Structures.Catalogs, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\TeklaStructures\2018\nt\bin\plugins\Tekla.Structures.Catalogs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tekla.Structures.Model, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\TeklaStructures\2018\nt\bin\plugins\Tekla.Structures.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\PartProperties.cs" />
+    <Compile Include="Export.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Helpers\ConcreteGeometry.cs" />
+    <Compile Include="Helpers\PartHistory.cs" />
+    <Compile Include="Helpers\PolygonSplitter.cs" />
+    <Compile Include="Helpers\Profile.cs" />
+    <Compile Include="Import.cs" />
+    <Compile Include="PartInfoClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Resources\Tekla_Close_NotSave.cs" />
+    <EmbeddedResource Include="Resources\Tekla_Close_Save.cs" />
+    <Compile Include="RunTekla.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Polimetall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,144 @@
+﻿<Window x:Class="Polymetal.Core.Client.Messenger.Balloon"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Title="Уведомление" Height="145" Width="343.333" Loaded="Balloon_OnLoaded" ResizeMode="NoResize" WindowStyle="None" 
+        ShowInTaskbar="False" x:Name="me" Background="{x:Null}" AllowsTransparency="True" Topmost="True">
+    <Window.Resources>
+        <Storyboard x:Key="HighlightCloseButton">
+            <DoubleAnimation Storyboard.TargetName="imgClose"
+                             Storyboard.TargetProperty="(UIElement.Opacity)" 
+                             From="0.5" 
+                             To="1" 
+                             Duration="00:00:00.1">
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="imgClose"
+                             Storyboard.TargetProperty="Width" 
+                             From="16" 
+                             To="18" 
+                             Duration="00:00:00.1">
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="imgClose"
+                             Storyboard.TargetProperty="Height" 
+                             From="16" 
+                             To="18" 
+                             Duration="00:00:00.1">
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Key="FadeCloseButton">
+            <DoubleAnimation Storyboard.TargetName="imgClose"
+                             Storyboard.TargetProperty="(UIElement.Opacity)" 
+                             From="1" 
+                             To="0.5" 
+                             Duration="00:00:00.1">
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="imgClose"
+                             Storyboard.TargetProperty="Width" 
+                             From="18" 
+                             To="16" 
+                             Duration="00:00:00.1">
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="imgClose"
+                             Storyboard.TargetProperty="Height" 
+                             From="18" 
+                             To="16" 
+                             Duration="00:00:00.1">
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Key="HighlightTsIcon">
+            <DoubleAnimation 
+                             Storyboard.TargetName="imgIcon"
+                             Storyboard.TargetProperty="Opacity"
+                             AutoReverse="True"
+                             From ="1" To ="0.3" RepeatBehavior="Forever" Duration="0:0:1" AccelerationRatio="0.15">
+            </DoubleAnimation>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Mouse.MouseEnter"
+                      SourceName="imgClose">
+            <BeginStoryboard Storyboard="{StaticResource HighlightCloseButton}"
+                             x:Name="HighlightCloseButton_BeginStoryboard" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Mouse.MouseLeave"
+                      SourceName="imgClose">
+            <BeginStoryboard Storyboard="{StaticResource FadeCloseButton}"
+                             x:Name="FadeCloseButton_BeginStoryboard" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Image.Loaded" SourceName="imgIcon">
+            <BeginStoryboard Storyboard="{StaticResource HighlightTsIcon}"
+                             x:Name="HighlightTsIcon_BeginStoryboard" />
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5" Grid.IsSharedSizeScope="True" >
+        <Border HorizontalAlignment="Stretch"
+                Margin="0,0,0,0"
+                BorderThickness="2,2,2,2"
+                BorderBrush="#FF997137" CornerRadius="0,10,0,10">
+            <Border.Effect>
+                <DropShadowEffect Color="#FF747474" />
+            </Border.Effect>
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0">
+                    <GradientStop Color="#FF4B4B4B"
+                		Offset="0" />
+                    <GradientStop Color="#FF8F8F8F"
+                		Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <TextBlock Margin="10,103,276,28"
+    		Text="{Binding MdbName, ElementName=me, Mode=Default}"
+    		TextWrapping="Wrap"
+    		Foreground="#FFECAD25"/>
+        <Image HorizontalAlignment="Left"
+               Margin="10,10,0,0"
+               Width="35"
+               Source="{Binding ImageSource, ElementName=me, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Stretch="Fill"
+               Height="35"
+               VerticalAlignment="Top" 
+               x:Name="imgIcon"/>
+        <TextBlock Margin="72,37,34,42"
+                   Foreground="#FFECAD25"
+                   TextWrapping="Wrap"
+                   Text="{Binding NotificationText, ElementName=me, Mode=Default}"
+                   FontWeight="Bold"/>
+        <Path Fill="#FFFFFFFF"
+              Stretch="Fill"
+              Margin="72,31,34,0"
+              VerticalAlignment="Top"
+              Height="1"
+              Data="M26,107 L220.04123,107"
+              SnapsToDevicePixels="True">
+            <Path.Stroke>
+                <LinearGradientBrush EndPoint="0.973,0.5"
+                                     StartPoint="0.005,0.5">
+                    <GradientStop Color="#00ECAD25"
+                		Offset="1" />
+                    <GradientStop Color="#87ECAD25"
+                		Offset="0" />
+                </LinearGradientBrush>
+            </Path.Stroke>
+        </Path>
+        <TextBlock Margin="72,10,10,0"
+                   VerticalAlignment="Top"
+                   Height="16"
+                   Text="{Binding BalloonText, ElementName=me, Mode=Default}"
+                   TextWrapping="Wrap"
+                   Foreground="#FFECAD25"
+                   FontWeight="Bold" />
+        <Image HorizontalAlignment="Left"
+               Margin="317,10,0,0"
+               Width="16"
+               Source="Images/118.png"
+               Stretch="Fill"
+               Opacity="0.5"
+               x:Name="imgClose"
+               MouseDown="ImgClose_MouseDown" Height="16" VerticalAlignment="Top"/>
+        <TextBlock Margin="72,103,34,10"
+    		Text="{Binding ProjectName, ElementName=me, Mode=Default}"
+    		TextWrapping="Wrap"
+    		Foreground="#FFECAD25"/>
+    </Grid>
+</Window>
